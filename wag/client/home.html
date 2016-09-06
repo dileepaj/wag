@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>WAG</title>
+<link type="text/css" href="css/main.css" rel="stylesheet" />
+<link type="text/css"
+	href="css/ui-lightness/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
+
+<script type="text/javascript" src="libs/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="libs/colResizable-1.3.min.js"></script>
+<script type="text/javascript"
+	src="libs/jquery-ui-1.8.20.custom.min.js"></script>
+<script type="text/javascript" src="libs/jquery-custom-file-input.js"></script>
+
+<script type="text/javascript" src="../old/model/ruleEngine/rules.js"></script>
+<script type="text/javascript" src="../old/model/dataObjects/features.js"></script>
+<script type="text/javascript" src="../old/model/businessObjects/scanner.js"></script>
+<script type="text/javascript" src="../old/model/businessObjects/results.js"></script>
+<script type="text/javascript" src="../old/model/businessObjects/fileMgt.js"></script>
+<script type="text/javascript" src="javaScripts/controllers/viewControllers.js"></script>
+</head>
+
+<body>
+
+	<!-- Dashboard -->
+	<div id="dashboard">
+		<font size="4" style="margin: 10px 300px 10px 10px;"><b>Web
+				Accessibility Generator</b></font>
+		<button id="files">Open file</button>
+		<button id="eval">Evaluate</button>
+		<button id="modify">Apply</button>
+		<button id="dep">Deploy</button>
+	</div>
+
+	<div id="dialog-form" title="Select evaluation criteria">
+		<p class="validateTips">All form fields are required.</p>
+		<form>
+			<fieldset>
+				<label for="disability">Select visual impairment</label>
+				<div id="disability">
+					<input type="checkbox" value=2 checked="true" /> Total Blind <br />
+					<input type="checkbox" value=3 checked="true" /> Low Vision <br />
+					<input type="checkbox" value=5 checked="true" /> Color Blind <br />
+				</div>
+				<br /> <br /> <label for="priority">Select priority level</label>
+				<select id="priority" class="combobox">
+					<option value="3">Level A</option>
+					<!-- High + Medium + Low -->
+					<option value="2">Level B</option>
+					<!-- High + Medium -->
+					<option value="1">Level C</option>
+					<!-- High -->
+				</select>
+			</fieldset>
+		</form>
+	</div>
+
+	<table class="structure" border="1">
+		<tr>
+			<!-- Resultlist -->
+			<td class="pane">
+				<div class="title">Accessibility Violations</div>
+				<ol id="list"></ol>
+			</td>
+
+			<!-- Code editor -->
+			<td>
+				<div id="wrapper">
+					<div id="filename"></div>
+					<div id="lines"></div>
+					<div id="code" contenteditable="true"></div>
+				</div>
+			</td>
+
+			<!-- Result details -->
+			<td class="pane">
+				<!-- Tabs -->
+				<div id="tabs">
+					<ul>
+						<li><a href="#feature">Specification</a></li>
+						<li><a href="#resolve">Guide</a></li>
+					</ul>
+					<div id="feature"></div>
+					<div id="resolve" style="display: none">
+						<div id="des"></div>
+						<div id="obj"></div>
+						<form>
+							<textarea id="ele" cols="30" rows="10" readonly="readonly"> </textarea>
+							</br>
+							</br>
+							<button id="ok">OK</button>
+							<button id="skip">Skip</button>
+						</form>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<!-- Progress bar -->
+			<td class="bottom" colspan="3">
+				<div style="margin-left: 20px;">
+					<h3>
+						Progress <span id="p"></span>
+					</h3>
+				</div>
+				<div id="progressbar" style="margin: 20px; height: 15px"></div>
+				<div id="summary" style="margin-left: 20px; font-size: 1.4em;"></div>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--<script type="text/javascript" src="{{ url_for('static', filename='javaScripts/validators/testyourrulevalidator.js')}}"></script>-->
+<html>
+<head>
+    <title>WAG Developer - tutorial</title>    
+    <link type="text/css" href="{{ url_for('static', filename='css/main.css')}}" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    
+
+</head>
+
+<body>
+
+<div class="span9 white-dashed ">
+      <div>
+		<h1>Welcome to the WAG Community</h1> 
+		<label>You can contribute the WAG project by adding new rules. Please follow the instructions below to build your first rule.</label>
+	</div>
+<br />
+	<div>
+		<h3>Build your first rule</h3>
+		
+		<label>Download WAG Developer Bundle<a href="/downloadwag"> here</a></label>
+		<br />
+		<li><label>Extract the downloaded WAG Developer bundle to a preferred location on your local machine</label></li>
+		<li><label>Open the web_accessibility_spec.xml file and add your feature properties there</label></li>
+		<li><label>Add the script to detect the violations of your rule in the Rules.py file</label></li>
+		<p><em>    * Refer the Rules_example.py for example rule implementation</em></p>
+		<li><label>Execute the RuleManager.py file giving a test page url as a parameter</label></li>
+		<label><b>	>>RuleManager.py http:\\example.com\index.html</b></label>
+		<br />		
+		<li><label>Once executed you can see the "RuleEvalResults.txt" file which is generated in the same location</label></li>
+		<li><label>This text file contains the jasonfied violation results found when applying your rule to the given test page url</label></li>
+		<li><label>Go to the <a href="rule_validate.html" onclick="updateObjectIframe(this); return false;">Test Your Rule</a> tab to check whether violations are detected correctly</label></li>
+		<p><em><b>    * Please enter the same url you have been used to generate violation results in the 'Enter Page url' text box</b></em></p>
+		<li><label>If you are getting the results as you expected zip the Rules.py file and the web_accessibility_spec.xml file together and <a href="rule_upload.html" onclick="updateObjectIframe(this); return false;">Upload</a> for assesement</label></li>
+		<li><label>Once your Code is tested and verified by the WAG team, you will be notified by mail</label></li>
+		<li><label>If the evaluation succeeded your Rule will be added to the WAG main rule base !</label></li>		
+		
+	</div>    
+</div>
+</body>
+</html>

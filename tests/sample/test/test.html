@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<TITLE></title>
+<!-- Include jquery and sourceFile.js for WAG framework -->
+<script type="text/javascript" src="../lib/sourceFile.js"></script>
+
+</head>
+<body>
+	<h1>Test Web Page</h1>
+	This sample web page is implemented with known accessibility violations
+	for the testing purposes
+
+	<h3>(1) Images should have alt text</h3>
+	<img src="../Koala.jpg" style="width: 50%">
+	<img src="../Desert.jpg" style="width: 50%" />
+	<br>
+	<br />
+
+	<h3>(2) Tables should have caption and summary</h3>
+	<table id="table1" border="1">
+		<tr>
+			<th>Topic</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>Physics</td>
+			<td>Physics</td>
+		</tr>
+		<tr>
+			<td>Chemistry</td>
+			<td>Chemistry</td>
+		</tr>
+		<tr>
+			<td>Maths</td>
+			<td>Maths</td>
+		</tr>
+	</table>
+
+	<h3>(3) Links should have purposeful text</h3>
+	<!-- check whether link list is a url -->
+	<a href="http://www.google.com" tabindex='0'>Google search</a>
+	<a href="http://www.google.com" tabindex='0'>Yahoo search</a>
+	<a href="http://www.google.com" tabindex='0'>www.google.com</a>
+
+	<h3>(4) Videos should have alternative text or audio</h3>
+	<embed src="helloworld.swf"></embed>
+
+	<h3>(5) Mouse events should have keyboard events</h3>
+	<!-- Double click -->
+	<button tabindex='0' ondblclick="alert('A user event fires!!!');"
+		onkeypress="alert('A user event fires!!!');">Double Click
+		here</button>
+	<div tabindex='0' ondblclick="alert('A user event fires!!!');">
+		Double Click here</div>
+
+	<h3>(6) Tab order</h3>
+	<!-- input elements -->
+	<label for="abc">Label: </label>
+	<input id="abc" type="text" />
+	<input type="button" value="button" />
+	<textarea></textarea>
+	<!-- links  refer above -->
+	<!-- elements with user events -->
+	<div onclick="alert('A user event fires!!!');">Click here</div>
+	<div onkeydown="alert('A user event fires!!!');">Enter here</div>
+
+	<h3>(7) Proper labeling for form controls</h3>
+	<!-- input type="text" -->
+	<input type="text" id="xyz" />
+	<input type="password" />
+
+	<h3>(8) Text description for color cues</h3>
+	My mother has
+	<font color="blue">blue</font> eyes My mother has
+	<span style="color: #ff0000">blue</span> eyes
+	<span> awsome! </span>
+
+</body>
+</html>

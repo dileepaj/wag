@@ -1,0 +1,23 @@
+ #theme1 {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            width: 100%;
+            border-collapse: collapse;
+			background-color: #f6a828;
+            color: #ffffff;
+		
+        }
+
+            #theme1 td, #theme1 th {
+                font-size: 1em;
+                border: 0px solid #D2691E;
+                
+            }
+
+            #theme1 th {
+                font-size: 1.1em;
+                text-align: left;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                
+            }
+

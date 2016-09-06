@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WAG</title>
+
+<link type="text/css" href="{{ url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet" />
+<link type="text/css" href="{{ url_for('static', filename='css/main.css')}}" rel="stylesheet" />
+
+</head>
+
+<body>
+
+	
+            <div class="pull-left"> <img src="static/img/wag-logo-horizontal.png" alt="WAG Logo" /> </div>
+
+    		<div class="main-wrapper row-fluid result" padding-left:"100px";>
+			
+		 <div > 
+			<br><br><br><br>  
+          <b>	PRIORITY: <br> High=1, Medium=2, Low=3<br> </b>
+ 			<b>DISABILITY rank: <br>Total Blind (TB)=2 Low Vision (LV)=3 ColorBlind(CB)=5 <br> TB*LV=6  TB*CB=10, LV*CB=15, TB*LV*CB=30 <br></b><br><br>
+          
+       		<table border="2" width="90%" align="left">
+       			<tr align="left">
+       				<th> Feature id</th>
+       				<th>Title</th>
+       				<th>Disability Rank</th>
+       				<th>Priority Level</th>
+       				<th>Error</th>
+       				<th>Description</th>
+       				<th>Solution</th>
+       			</tr>
+       			
+       			<tr align="left">
+       				<td> 1</td>
+       				<td>Text alternatives for images </td>
+       				<td>30</td>
+       				<td>1</td>
+       				<td>Image missing alternative</td>
+       				<td>The images that represent some information about the content of the Website should have alternative description in text. This text alternative is used by screen readers to convey the content of image to visually impaired users who cannot clearly observe images. The text alternative should not necessarily describe the visual characteristics of the image itself but must convey the same meaning as the image</td>
+       				<td>Enter alt attributes on img elements. And enter null alt text and no title attribute on img elements used for decoration that screen readers should ignore</td>
+       			</tr>
+       			
+       			<tr align="left">
+       				<td> 2</td>
+       				<td>Text or audio alternatives for videos</td>
+       				<td>30</td>
+       				<td>1</td>
+       				<td>Video missing alternative</td>
+       				<td>Basically the multimedia content appears on Websites like videos should be provided with a meaningful caption. Further they can be provided with an alternative text reference or a prerecorded audio describing its meaning. The screen reader will utilize alternative to convey the content of videos to visually impaired users</td>
+       				<td>Include the multimedia content like videos within embed elements. Use noembed child element on each embed element. Then it is clear to screen readers that an alternative is associated with the embed element it describes.</td>
+       			</tr>
+       			
+       			
+       			<tr align="left">
+       				<td>3</td>
+       				<td>Express the meaning of color cues</td>
+       				<td>30</td>
+       				<td>1</td>
+       				<td>Explain or avoid color cues</td>
+       				<td>Colors are often used to indicate some clues about the Web content. But the meaning of such indications can not be detected by screen readers. The purpose of using color cues should be expressed by text descriptions as well.  Or else better avoid using such color cues </td>
+       				<td>Add a text indication to convey the purpose of using a different color. If the colors are used only for decoration purposes, skip them</td>
+       			</tr>
+       			
+       			
+       			<tr align="left">
+       				<td>4</td>
+       				<td>Summary for data tables</td>
+       				<td>6</td>
+       				<td>2</td>
+       				<td>Table missing a summary</td>
+       				<td>Reading tabular data going through each cell is not much user friendly for visually impaired users. Most of the time it is sufficient to provide a summary of the table content with a meaningful caption to express the information in the table. After reading the summary, the users will be able decide whether they need to read the table or not </td>
+       				<td>Include table summary attribute. The summary attribute should give an overview of the purpose or should explain how to navigate the table. The caption should not duplicate information in the summary</td>
+       			</tr>
+       			
+       			<tr align="left">
+       				<td>5</td>
+       				<td>Caption for data table</td>
+       				<td>6</td>
+       				<td>2</td>
+       				<td>Table missing a caption</td>
+       				<td>Reading tabular data going through each cell is not much user friendly for visually impaired users. Most of the time it is sufficient to provide a meaningful caption of the table content with a meaningful caption to express the information in the table. After reading the caption, the users will be able decide whether they need to read the table or not </td>
+       				<td>Include table caption child element. The caption should not duplicate information in the summary</td>
+       			</tr>
+       			
+       			<tr align="left">
+       				<td>6</td>
+       				<td>Proper labeling for form controls</td>
+       				<td>6</td>
+       				<td>1</td>
+       				<td>Input requires a proper label</td>
+       				<td>Understanding and interacting with form controls or input elements are very critical tasks for visually impaired users. In order to express the proper meaning of each control it is required to use labels and titles accordingly. It is good to attach each input element explicitly to a particular label element</td>
+       				<td>IThe input element should have an id attribute and the corresponding label element should have a for attribute. The values of these two attributes must be equal</td>
+       			</tr>
+       			
+       			
+       			<tr align="left">
+       				<td>7</td>
+       				<td>Keyboard control for mouse events</td>
+       				<td>6</td>
+       				<td>1</td>
+       				<td>Keyboard event required</td>
+       				<td>Generally the functions that require keyboard accessibility include form controls and special functions defined under event handlers. Therefore all the mouse event handlers should also be handled by the corresponding keyboard event handlers</td>
+       				<td>Add onkeypress attribute same as the ondblclick attribute</td>
+       			</tr>
+       			
+       			<tr align="left">
+       				<td>8</td>
+       				<td>Keyboard control for mouse events</td>
+       				<td>6</td>
+       				<td>1</td>
+       				<td>Keyboard event required</td>
+       				<td>Generally the functions that require keyboard accessibility include form controls and special functions defined under event handlers. Therefore all the mouse event handlers should also be handled by the corresponding keyboard event handlers</td>
+       				<td>Add onkeypress attribute same as the ondblclick attribute</td>
+       			</tr>
+       			
+       				<tr align="left">
+       				<td>9</td>
+       				<td>Purposeful link text</td>
+       				<td>6</td>
+       				<td>1</td>
+       				<td>Link text is not purposeful</td>
+       				<td>The user should be able to identify the purpose of a link from the link text alone. The description lets a user distinguish this link from other links in the Web page and helps the user determine whether to follow the link or not. The URI of the destination is generally not sufficiently descriptive</td>
+       				<td>Replace the URL used as the text of the anchor element with a purposeful description.</td>
+       			</tr>
+       			
+       				<tr align="left">
+       				<td>10</td>
+       				<td>Tab order to focusable elements</td>
+       				<td>6</td>
+       				<td>1</td>
+       				<td>The element missing tab order</td>
+       				<td>The order of content presented to Assistive Technology should allows the user to make sense of the content regardless of the order when rendered visually. The interactive elements like form controls and links receive the focus by default. Therefore those should be placed in an order that follows sequences and relationships in the content. Generally tab orders should be explicitly defined on other elements to receive focus in proper order</td>
+       				<td>Add tabindex attribute in the focusable element. If the logical order as appear in DOM is correct, enter tabindex value zero. If not enter positive integer value according to the required focus order</td>
+       			</tr>
+       			
+       			
+       		</table> 
+</fieldset>
+</div>
+</div>
+<div  class="footer1">©99XTechnology </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WAG</title>
+
+<link type="text/css" href="{{ url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet" />
+<link type="text/css" href="{{ url_for('static', filename='css/main.css')}}" rel="stylesheet" />
+<script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<!--<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.7.2.min.js')}}"></script>-->
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.10.2.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-ui-1.8.20.custom.min.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-custom-file-input.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-xdomainajax.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/URI.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/frame.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery.blockUI.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javaScripts/controllers/dashboard.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-migrate-1.2.1.js')}}"></script>
+
+
+
+<script type="text/javascript">
+        function updateObjectIframe(which) {
+        	var p = $(which).parent();
+        	$('.left-menu li').removeClass('m-active');
+        	p.addClass('m-active');
+           // document.getElementById('one').innerHTML = '<' + 'object id="BindElement" name="bind" type="text/html" data="' + which.href + '"><\/object>';
+	       $.ajax({
+	        	url : which.href,
+	        	type : 'GET',
+	        	success : function(data){
+					$('#replace').html(data)					
+	        	}                    	
+	       });	
+        }
+        
+        $(function(){
+        	updateObjectIframe(document.getElementById('dashbrd'))
+        })
+</script>
+</head>
+
+<body>
+<div class="header-wrapper row-fluid">
+
+<div class="pull-left"><a href=""><img src="static/img/wag-logo-horizontal.png" alt="WAG Logo" /></a></div>
+<input id="userid" type="hidden" value="{{userid}}" />
+<input id="userType" type="hidden" value="{{userType}}" />
+	
+    <span class="user-style">Logged in as {{userid}}!</span>
+	 <a id="btnLogout" href="/logout" class="header-links h-none" >Logout</a>
+	
+	<a href="/" class="header-links h-back">Back</a>
+	 <a href="/documents" target="_blank" > Help &nbsp; </a>
+
+    
+
+</div>
+<div class="main-wrapper row-fluid dashboard">
+
+    <div class="span2">
+    	<ul class="left-menu">
+        	<li  class="m-active"><a id='dashbrd' href="Dashboard_table.html" onclick="updateObjectIframe(this); return false; " class="m-project"> Projects </a></li>
+            <li><a href="buyPage.html" onclick="updateObjectIframe(this); return false; " class="m-settings"> Buy </a></li>
+            <li><a href="#" class="m-about"> About </a></li>
+        </ul>	
+    </div>
+     <div id="replace" class="span10 white-back">
+		<object id="BindElement" name="bind" type="text/html" data=""></object>
+    </div>
+</div>
+
+
+<div  class="footer2">©99XTechnology </div>
+</body>
+</html>

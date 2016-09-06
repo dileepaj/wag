@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WAG</title>
+
+<link type="text/css" href="{{ url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet" />
+<link type="text/css" href="{{ url_for('static', filename='css/main.css')}}" rel="stylesheet" />
+<script type='text/javascript' src='http://www.google.com/jsapi'></script>
+<!--<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.7.2.min.js')}}"></script>-->
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.10.2.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-ui-1.8.20.custom.min.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-custom-file-input.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javaScripts/controllers/dashboard.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-migrate-1.2.1.js')}}"></script>
+
+
+
+<script type="text/javascript">		
+	$(function(){
+		var a = document.getElementById('communitylink');
+		updateObjectIframe(a);
+	});
+
+        function updateObjectIframe(which) {   
+        	//var tab_url = "community_home.html";     	
+        	//var previous_url = document.referrer;
+        	//location.href = "/community";
+        	//alert(document.referrer)
+        	//if(previous_url.indexOf("testnewrule") !== -1){
+        	//	tab_url = "rule_validate.html";
+        	//	$('.left-menu li').removeClass('m-active');
+        	//	var p = $('#validate_li').addClass('m-active');
+        	//	p.addClass('m-active');
+        	//}
+        	
+        	if(which != null){
+        		tab_url = which.href;
+        		var p = $(which).parent();
+        		$('.left-menu li').removeClass('m-active');
+        		if(p[0].nodeName == 'LI'){        		
+        			p.addClass('m-active');
+        		}
+        		else{
+        			if(tab_url.indexOf("rule_validate.html") !== -1){
+        				var p = $('#validate_li').addClass('m-active');
+        			    p.addClass('m-active');
+        			}
+        			else if(tab_url.indexOf("rule_upload.html") !== -1){
+        				var p = $('#upload_li').addClass('m-active');
+        			    p.addClass('m-active');
+        			}
+        		}
+        	}
+        	
+	       $.ajax({
+	        	url : tab_url,
+	        	type : 'GET',
+	        	success : function(data){
+					$('#replace').html(data)					
+	        	}                    	
+	       });	
+        }
+</script>
+</head>
+
+<body>
+<div class="header-wrapper row-fluid">
+
+<div class="pull-left"><a href=""><img src="static/img/wag-logo-horizontal.png" alt="WAG Logo" /></a></div>
+
+	<a href="/" class="header-links h-back">Back</a>
+
+
+
+</div>
+<div class="main-wrapper row-fluid dashboard">
+
+    <div class="span2">
+    	<ul class="left-menu">
+        	<li class="m-active"><a id='communitylink' href="community_home.html" onclick="updateObjectIframe(this); return false; " > Community </a></li>
+            <li ><a id='tutorial' href="community_tutorial.html" onclick="updateObjectIframe(this); return false; " > Tutorial </a></li>
+            <li id='validate_li'><a id='validate' href="rule_validate.html" onclick="updateObjectIframe(this); return false; " > Test your rule </a></li>
+            <li id='upload_li'><a id='upload' href="rule_upload.html" onclick="updateObjectIframe(this); return false; " > Upload </a></li>
+        </ul>	
+    </div>
+    <div id="replace" class="span10 white-back">
+		<object id="BindElement" name="bind" type="text/html" data=""> </object>
+    </div>
+</div>
+
+
+
+</body>
+</html>

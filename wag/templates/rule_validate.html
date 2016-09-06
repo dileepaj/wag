@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--<script type="text/javascript" src="{{ url_for('static', filename='javaScripts/validators/testyourrulevalidator.js')}}"></script>-->
+<html>
+<head>
+    <title>Welcome to WAG</title>
+    
+    <link type="text/css" href="{{ url_for('static', filename='css/main.css')}}" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+
+<div class="span9 white-dashed">
+         <form action="/testnewrule" method="post" enctype="multipart/form-data" id="frm_community_test">
+          <span class="url-text-box">
+          <fieldset >
+            <legend>Validate Your Rule</legend>        	
+        	
+            <label>
+            	Upload Json: <input type="file" name="upload_json" id="upload_json" class="btn btn-success"> </label>
+           	<label>
+            	Enter Page url:<input name="testpageUrl" id="testpageUrl" type="text" >
+            	<br />
+            	<input type="submit" name="testRule" id="btn_testRule" value="Validate Rule" class="btn  btn-danger btn-large" />
+				 
+			</label>
+          </fieldset>
+          </span>
+          </form>
+          <br />
+          <br />        
+</div>
+</body>
+</html>

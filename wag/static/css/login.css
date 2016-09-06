@@ -1,0 +1,87 @@
+ #login {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            #login td, #review th {
+                font-size: 1em;
+                border: 0px solid #58ACFA;
+                padding: 3px 7px 2px 7px;
+            }
+
+            #login th {
+                font-size: 1.1em;
+                text-align: left;
+                padding-top: 5px;
+                padding-bottom: 4px;
+                background-color: #58ACFA;
+                color: #ffffff;
+            }
+
+        .auto-style1 {
+        }
+
+        #Text1 {
+            width: 188px;
+            height: 29px;
+        }
+
+        #Text2 {
+            width: 188px;
+            height: 29px;
+        }
+
+        #Text3 {
+            width: 188px;
+            height: 29px;
+        }
+
+        #Text4 {
+            width: 188px;
+            height: 29px;
+        }
+
+        #txtUsername {
+            width: 188px;
+            height: 25px;
+        }
+
+        #txtEmail {
+            width: 188px;
+            height: 25px;
+        }
+
+        #txtPassword {
+            width: 188px;
+            height: 25px;
+        }
+
+        #txtCPassword {
+            width: 188px;
+            height: 25px;
+        }
+
+        .auto-style2 {
+            width: 209px;
+        }
+
+        .auto-style3 {
+            width: 109px;
+        }
+
+
+        #Button1 {
+            height: 34px;
+            width: 97px;
+        }
+
+        #btnRegister {
+            height: 34px;
+            width: 82px;
+        }
+
+        #btnLogin {
+            width: 82px;
+            height: 34px;
+        }

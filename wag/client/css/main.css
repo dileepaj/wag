@@ -1,0 +1,164 @@
+
+	body 
+	{ 
+		font: 64% "Trebuchet MS", sans-serif;
+		margin: 0px;
+	}
+	
+	#dashboard
+	{
+		padding: 6px;
+		background-color: #f6a828;
+		color: #1C94C4;
+	}
+	
+	.structure
+	{
+		width: 100%;
+		height: 590px; 
+		padding: 5px;
+	}
+	
+	.pane 
+	{
+		width: 22%;
+		vertical-align: top;
+		background-color:#f0f0f0;
+	}
+	
+	.bottom 
+	{
+		height: 10%;
+		background-color:#f0f0f0;
+	}
+
+	#wrapper 
+	{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		font: 10pt Courier New;
+		overflow: auto;
+		background-color:#FFFFFF;
+	}
+	
+	#filename
+	{
+		background-color:#f0f0f0;
+	}
+	
+	#lines 
+	{
+		position: absolute;
+		width: 40px;
+		height: auto;
+		text-align:center;
+		background-color:#f0f0f0;
+	}
+	
+	#code
+	{
+		position: absolute;
+		left: 40px;
+		width: 100%;
+		height: auto;
+		background-color:#FFFFFF;
+		white-space: nowrap;
+	}
+	
+	#tabs ul
+	{ 
+		padding: 0em .5em; 
+	}
+	
+	#tabs a
+	{ 
+		padding: .1em 1em;
+	}
+	      
+	.ui-autocomplete-input
+	{ 
+		padding: 0.48em 0 0.47em 0.45em;
+	}
+	
+	#list .ui-selected 
+	{ 
+		background: lightblue; 
+		color: blue; 
+		font-weight: bold;
+	} 
+	
+	#list 
+	{ 
+		margin-left: -15px; 
+	}
+	
+	#list li 
+	{ 
+		padding:2px; 
+		font-size: 1.1em; 
+		background: pink;
+	}
+	
+	#list a
+	{
+		text-decoration: none;
+	}
+	
+	#list .list-resolved 
+	{
+		background: lightgreen; 
+	} 
+	
+	#list .list-skipped 
+	{ 
+		background: yellow;
+	} 
+	
+	.title
+	{ 
+		border: 1px solid #e78f08; 
+		background: #f6a828; 
+		border-radius: 4px; 
+		padding: .5em 1em; 
+		margin: 2px;
+		font: bold 12px "Trebuchet MS", sans-serif;
+		color: #1C94C4;
+	}
+	
+	#resolve button 
+	{ 
+		border:1px solid #B8B8B8;
+		background: #F8F8F8;
+		width: 60px;
+		height: 25px;
+		border-radius: 12%;
+		color: #1C94C4;
+		font: bold 11px "Trebuchet MS", sans-serif;
+		text-align: center;
+		padding: 0px 0px 3px 0px;
+	}
+	
+	#resolve button:hover 
+	{ 
+		border:1px solid #f6a828;
+		color: #f6a828;
+	}
+	
+	fieldset 
+	{ 
+		border:1px solid #B8B8B8; 
+	}
+	
+	.headings 
+	{
+		font: bold 11px "Trebuchet MS", sans-serif;
+		color: #1C94C4;
+	}
+	
+	.data 
+	{
+		font-weight: bold;
+	}
+	
+	

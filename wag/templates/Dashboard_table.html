@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script type="text/javascript" >
+     	$('#newProject').click(function(){
+		   if($('#userType').val() == 'Free'){
+				rowCount = $('#projects tr').length;
+		   		if (rowCount > 2){
+		   			alert("Free User Not allowed to Submit new project");	
+		   		}
+		   		else{
+		   			$.ajax({
+			        	url : '/newProject.html',
+			        	type : 'GET',
+			        	success : function(data){
+							$('#replace').html(data)					
+			        	}                    	
+			       });
+		   		}
+			}
+			else {
+				$.ajax({
+		        	url : '/newProject.html',
+		        	type : 'GET',
+		        	success : function(data){
+						$('#replace').html(data)					
+		        	}                    	
+		       });
+			}
+		});		
+     </script>
+     <br/>
+<button id='newProject' class="btn btn-info">New Project</button>
+
+<table id="projects" class="table table-condensed table-wag">
+                            <thead>
+                            <tr>
+                                <th width="140">Project Name</th>
+                                <th width="200">URL</th>
+                               
+                                <th width="150">Last Evaluated on</th>
+                                <th width="40" class="center-txt">No of Violations</th>
+                                <th width="40" class="center-txt">Status</th>
+                                <th width="90">Re-evaluate</th>
+                            </tr>
+                            </thead>
+                        </table>
+
+</body>
+</html>

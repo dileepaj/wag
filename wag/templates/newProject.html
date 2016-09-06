@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>Welcome to WAG</title>
+    
+    <link type="text/css" href="{{ url_for('static', filename='css/main.css')}}" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+
+<div class="span9 white-dashed">
+         
+           <span class="url-text-box">
+           	<!--
+            Project Name:	
+            <input type="text" name="projectName" id="projName"> <br />
+            Enter url:
+            <input name="clientUrl" id="externURL" type="text" >
+            <!-- <button id="URLSubmit" onclick="initSubmit()"> Evaluate </button>   
+			
+			 <button name="clientUrl" onclick="initSubmit()" id="URLSubmit" class="btn  btn-large icon2-wag"></button>  
+			 
+			 
+            </span>
+            
+        
+            -->
+         
+          <fieldset >
+            <legend>Validate Web accessibility</legend>
+        	
+        
+            <label>
+            	Project Name: <input type="text" name="projectName" id="projName" > </label>
+				
+			           	
+           	<label>
+            	Enter url: &nbsp; &nbsp; &nbsp; &nbsp;  <input name="clientUrl" id="externURL" type="text" > 
+				  
+			</label>
+	<button name="clientUrl" onclick="initSubmit()" id="URLSubmit" class="btn  btn-danger btn-large">Check It</button>
+          
+          </fieldset>
+   
+            
+           </span>
+            
+            
+            <!--
+            <label class="checkbox">
+              <input id='crossDomain' type="checkbox" checked="checked"> Cross domain analysis
+            </label>
+            --> 
+            <br />
+            <br />
+            <p><em>All form fields are required</em></p> 
+            <h1><span class="i-view"> </span>Select visual impact</h1> 
+            <div id="disability">
+            <label class="checkbox">
+              <input type="checkbox" value=2 checked="checked"> Total Blind
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" value=3 checked="checked"> Low Vision
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" value=5 checked="checked"> Color Blind
+            </label>
+            </div>
+            <br />
+            <h1><span class="i-level"> </span>Select priority level</h1> 
+
+            <select id="priority" class="combobox" name"D1">
+              <option value="3">All</option>
+              <option value="2">High priority</option>
+              <option value="1">Highest priority only</option>
+            </select>
+          </fieldset>
+        
+</div>
+
+<script type="text/javascript">
+                  $(document).ready(function(){
+                       $("#externURL").keypress(function(e){
+                         if(e.keyCode == 13){
+             $("#URLSubmit").click()
+                     }
+                           })
+                             })
+      </script>
+      
+</body>
+</html>

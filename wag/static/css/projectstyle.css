@@ -1,0 +1,58 @@
+.project {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            .project td, .project th {
+                font-size: 1em;
+                border: 2px solid #FFFFFF;
+                padding: 3px 7px 2px 7px;
+            }
+
+            .project th {
+                font-size: 1.1em;
+                text-align: left;
+                padding-top: 5px;
+                padding-bottom: 4px;
+                background-color: #f6a828;
+                color: #ffffff;
+            }
+
+             .project tr.alt td {
+                color: #000000;
+                background-color: #F3E2A9;
+            }
+
+.evalHist {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+           .evalHist td, .evalHist th {
+                font-size: 1em;
+                border: 2px solid #FFFFFF;
+                padding: 3px 7px 2px 7px;
+            }
+
+            .evalHist th {
+                font-size: 1.1em;
+                text-align: left;
+                padding-top: 5px;
+                padding-bottom: 4px;
+                background-color: #f6a828;
+                color: #ffffff;
+            }
+
+            .evalHist tr.alt td {
+                color: #000000;
+                background-color: #F3E2A9;
+            }
+
+
+			
+.historyTable{
+}
+.chart_div{
+}

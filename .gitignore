@@ -1,0 +1,8 @@
+*.pyc
+.project
+.pydevproject
+.pydevproject~
+.metadata/
+runserver.bat
+ghostdriver.log
+*.orig

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="{{ url_for('static', filename='javaScripts/validators/communityvalidator.js')}}"></script>
+<html>
+<head>
+    <title>Welcome to WAG</title>
+    
+    <link type="text/css" href="{{ url_for('static', filename='css/main.css')}}" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+
+<div class="span9 white-dashed">
+        <form action="/communityupload" method=post enctype="multipart/form-data"" id="id_frm_community_upload">
+		<table border="0" align="left">
+		<tr>
+			<td>
+				<label name="nm_community_user_name" id="id_community_user">User Name</label>
+			</td>
+			<td>
+				<input type="text" name="txt_community_user_name" class="form-control input-lg" id="id_txt_community_user_name" placeholder="Please enter your name" required="required"/>
+				<label id="id_error_user_name"></label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label name="nm_community_user_email" id="id_community_user_email">Email</label>
+			</td>
+			<td>
+				<input type="email" name="txt_community_user_email" id="id_txt_community_user_email" class="form-control input-lg" placeholder="Please enter your email" required="required"/><label id="id_error_email"> </label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label name="nm_work_description" id="id_work_description">User Description</label>
+			</td>
+			<td>
+				<textarea id="id_txt_work_description" class="form-control input-lg" name="txt_work_description" required="required"></textarea>
+				<label id="id_error_work_description"></label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label name="nm_task_description" id="id_task_description" name="txt_task_description">Work Description</label>
+			</td>
+			<td>
+				<textarea id="id_txt_task_description" class="form-control input-lg" name="txt_task_description" required="required"></textarea>
+				<label id="id_error_task_description"></label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Upload</label>
+			</td>
+			<td>
+				<input id="upload_community_id" type="file" name="upload_file" multiple="multiple" required="required">
+				<input type="submit" name="btn_uplpad" id="btn_upload_id" class="btn btn-large btn-success" value="Upload"/>
+				<input type="hidden" name="json_val" id="json_val_hidden" value="json value string" />
+			</td>
+		</tr>
+	</table>
+</form>
+                
+</div>
+</body>
+</html>

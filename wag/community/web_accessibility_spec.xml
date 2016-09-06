@@ -1,0 +1,26 @@
+<!-- PRIORITY: High=1, Medium=2, Low=3 -->
+<!-- DISABILITY rank: TB=2, LV=3, CB=5, TB*LV=6, TB*CB=10, LV*CB=15, TB*LV*CB=30 -->
+
+<FEATURES>
+	<FEATURE id="1">
+		<TITLE><!--Enter the feature title here--></TITLE>
+		<DISABILITY rank="<!--enter the disability rank of your rule-->"><!--Enter the Disability rank description here--></DISABILITY>
+		<PRIORITY level="<!--Enter the priority level of your rule-->"><!--Enter the priority description here--></PRIORITY> 
+		<ERROR><!--Enter the violation error here --></ERROR>
+		<DESCRIPTION><!-- Enter the description of the error here--></DESCRIPTION>
+		<SOLUTION><!--Enter the solution to be applied here --></SOLUTION>
+	</FEATURE>
+</FEATURES>
+
+<!--Please refer following example feature for more information -->
+
+<!--<FEATURES>
+	<FEATURE id="1">
+		<TITLE>Text alternatives for images</TITLE>
+		<DISABILITY rank="30">Total Blind, Low Vision, Color Blind</DISABILITY>
+		<PRIORITY level="1">High</PRIORITY> 
+		<ERROR>Image missing alternative</ERROR>
+		<DESCRIPTION>The images that represent some information about the content of the Website should have alternative description in text. This text alternative is used by screen readers to convey the content of image to visually impaired users who cannot clearly observe images. The text alternative should not necessarily describe the visual characteristics of the image itself but must convey the same meaning as the image.</DESCRIPTION>
+		<SOLUTION>Enter alt attributes on img elements. And enter null alt text and no title attribute on img elements used for decoration that screen readers should ignore.</SOLUTION>
+	</FEATURE>
+</FEATURES>-->

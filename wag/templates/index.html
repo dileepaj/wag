@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WAG</title>
+
+<link type="text/css" href="{{ url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet" />
+<link type="text/css" href="{{ url_for('static', filename='css/main.css')}}" rel="stylesheet" />
+
+<!--<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.7.2.min.js')}}"></script>-->
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.10.2.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-ui-1.8.20.custom.min.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-custom-file-input.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-xdomainajax.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javaScripts/controllers/urlSubmit.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-migrate-1.2.1.js')}}"></script>
+
+
+
+
+</head>
+
+<body>
+	
+	
+      
+<div class="header-wrapper row-fluid">
+	
+	 
+	{% if userid != "Guest" %}
+	
+	
+       <span class="user-style"> Welcome  <a href="/dashboard">{{userid}}!</a> </span>
+				
+		 <a id="btnLogout" href="/logout" class="	" >Logout</a>
+			
+	{% else %}
+	   <span class="user-style">Welcome {{userid}}!</span>
+		
+		<a id="login" href="#" onclick="location.href='login'" class="header-links h-login">Login</a>
+		
+		
+	{% endif %}
+	    <a href="/documents" target="_blank" > Help &nbsp; </a>
+	    <a href="/community" target="_blank" > Community &nbsp; </a>
+
+</div>
+
+<div class="main-wrapper row-fluid landing">
+
+	<div class="span3 main-left">
+            <img src="static/img/wag-logo.png" alt="WAG Logo" />
+            <p style="text-align:right">Web Accessibility Guide is a diligent drive 
+            	towards turning world wide web into an intimate 
+            	resource for visually impaired by conflating 
+            	isolated attempts in the same direction while 
+            	enabling to harness special skills possessed by 
+            	vision deprived.</p>
+    </div>
+    
+    
+	<div class="span9 white-dashed">
+		<div class="landing-box" >
+          <fieldset>
+            <h1>Enter your web site url</h1>
+            <span class="url-text-box">
+            	
+            <input name="clientUrl" id="externURL" type="text" placeholder="your url...">
+            <button id="URLSubmit" class="btn  btn-danger btn-large">Check It</button> 
+            </span>
+            <br />
+            <br />
+            <h1><span class="i-view"> </span>Select visual impairment categories</h1> 
+            <div id="disability">
+            <label class="checkbox">
+              <input type="checkbox" value=2 checked="checked"> Total Blindness
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" value=3 checked="checked"> Low Vision
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" value=5 checked="checked"> Color Blindness
+            </label>
+            </div>
+            <br />
+            <h1><span class="i-level"> </span>Select rule priority level</h1> 
+
+            <select id="priority" class="combobox" name"D1">
+              <option value="3">All</option>
+              <option value="2">High priority</option>
+              <option value="1">Highest priority only</option>
+            </select>
+          </fieldset>
+          
+        </div>
+             
+    </div>
+
+      
+</div>
+
+<div  class="footer2">©99XTechnology</div>
+</body>
+ 
+</html>
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WAG</title>
+
+<link type="text/css" href="{{ url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet" />
+<link type="text/css" href="{{ url_for('static', filename='css/main.css')}}" rel="stylesheet" />
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.10.11.js')}}"></script>
+<script type='text/javascript' src='http://www.google.com/jsapi'></script>   
+<!--<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.7.2.min.js')}}"></script>-->
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.10.2.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-ui-1.8.20.custom.min.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-custom-file-input.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javaScripts/controllers/project.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/bootstrap.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-migrate-1.2.1.js')}}"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+
+<body>
+	
+
+	
+<div class="header-wrapper row-fluid">
+
+<div class="pull-left"><a href="index.html"><img src="static/img/wag-logo-horizontal.png" alt="WAG Logo" /></a></div>
+	<input id="userid" type="hidden" value="{{userid}}" />
+	
+	
+	
+
+
+        <span class="user-style">Logged in as {{userid}}!</span>
+		<a id="btnLogout" href="/logout" class="header-links h-none" >Logout</a>
+		<a href="/" class="header-links h-back">Back</a>
+		 <a href="/documents" target="_blank" > Help &nbsp; </a>
+    
+
+
+</div>
+<div class="main-wrapper row-fluid result">
+	<div class="span6 inner-box">
+    	<h3 id="curSite" >{{name}}</h3>
+        <h5>Pages in the site</h5>
+        <table id="pages" class="table table-condensed table-wag" >
+        	<thead>
+                  <tr>
+                    <th>Page URL</th>
+                    <th>Status</th>
+                  </tr>
+            </thead>
+        </table>
+        
+        <h5>Evaluation history</h5>
+		<table id="evalHist" class="table table-condensed table-wag" >
+        	<thead>
+                  <tr>
+                    <th>Evaluation Number</th>
+                    <th>No. of violations</th>
+                    <th>Evaluated on</th>
+  				  </tr>
+            </thead>
+		</table>
+
+
+    </div>
+    
+    <div id='historyTable' style="height:900px;width:400px;float:left; margin-top:10px;" class='span6'>
+	<div id='chart_div' style='width: 600px; height: 500px; margin-left:50px;'>
+		
+</div> 
+	</div>
+	
+	<div>
+<body style="font-family: Arial;border: 0 none;">
+    <div id="visualization" style="width: 800px;  margin-top:500px; margin-left:52%; height: 400px;">
+		 </div>
+  </body>
+		</div>
+
+	
+	
+</div> 
+<div  class="footer1">©99XTechnology </div>
+
+</body>
+</html>

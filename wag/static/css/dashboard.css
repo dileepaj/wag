@@ -1,0 +1,104 @@
+        #dashboard {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            #dashboard td {
+                font-size: 1em;
+                border: 0px solid #f6a828;
+                padding: 3px 7px 2px 7px;
+            }
+
+            #dashboard th {
+                font-size: 1.1em;
+                text-align: left;
+                padding-top: 5px;
+                padding-bottom: 4px;
+                background-color: #FFBF40;
+                color: #ffffff;
+            }
+
+        .auto-style1 {
+            height: 43px;
+        }
+
+        #btnLogin {
+            width: 82px;
+            height: 34px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a:link, a:visited {
+            display: block;
+            font-weight: bold;
+            color: #FFFFFF;
+            background-color: #f6a828;
+            width: 200px;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        a:hover, a:active {
+            background-color: #FFBF40;
+        }
+
+        .auto-style1 {
+            width: 870px;
+        }
+
+        .auto-style3 {
+            width: 1981px;
+        }
+
+        .auto-style4 {
+            width: 177px;
+            background-color: #f6a828;
+        }
+
+        #mainTable {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        
+
+        .auto-style5 {
+            width: 437px;
+        }
+
+        .auto-style7 {
+            width: 1981px;
+        }
+
+        .auto-style8 {
+            width: 870px;
+        }
+
+        .auto-style9 {
+            width: 11px;
+        }
+
+        #one {
+            position: absolute;
+            
+            padding: 0px 0px 0px 0px;
+        }
+
+        object {
+            width: 1000px;
+            height: 900px;
+            border: solid 0px #000000;
+        }
+        .auto-style10 {
+            width: 200px;
+            background-color: #f6a828;
+        }

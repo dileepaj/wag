@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>WAG</title>
+		<link type="text/css" href="{{ url_for('static', filename='css/main.css')}}" rel="stylesheet" />
+		<link type="text/css" href="{{ url_for('static', filename='css/ui-lightness/jquery-ui-1.8.20.custom.css')}}" rel="stylesheet" />
+		<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.7.2.min.js')}}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='libs/colResizable-1.3.min.js')}}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-ui-1.8.20.custom.min.js')}}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-custom-file-input.js')}}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='javaScripts/controllers/viewControllers.js')}}"></script>
+</head>
+
+<body>
+   	
+   	<input id="userid" type="hidden" value="{{userid}}"/>
+	<input id="reqType" type="hidden" value="{{type}}"/>
+	<input id="siteName" type="hidden" value="{{siteName}}"/>
+	<input id="evalNum" type="hidden" value="{{evalNum}}"/>
+	
+	
+	<!-- Dashboard -->
+	<div id="dashboard">
+		<font size="4" style="margin: 10px 300px 10px 10px;"><b>Web	Accessibility Guide</b></font>
+		<button id="modify">Check</button>
+		<input id = "xmlFile" type = "hidden" value= "{{url_for('static',filename = 'knowledgeBase/web_accessibility_spec.xml')}}"/>
+	</div>
+
+	<table class="structure" border="1">
+		<tr>
+			<!-- Resultlist -->
+			<td class="pane">
+				<div class="title">Accessibility Violations</div>
+				<ol id="list">
+					
+				</ol>
+				<div id="violationTree" >
+					
+				</div>
+			</td>
+
+			<!-- Code editor -->
+			<td>
+				<div id="wrapper">
+					<div id="urlName">
+						<p id="curUrl">{{curUrl}}</p>
+					</div>
+					<div id="lines"></div>
+					<div id="code" contenteditable="true">{{content}}</div> 
+				</div>
+			</td>
+
+			<!-- Result details -->
+			<td class="pane">
+				<!-- Tabs -->
+				<div id="tabs">
+					<ul>
+						<li><a href="#feature">Specification</a></li>
+						<li><a href="#resolve">Guide</a></li>
+					</ul>
+					<div id="feature"></div>
+					<div id="resolve" style="display:none"> 
+						<label class='headings'>Solution</label> <div id="des"></div><br />
+						<div id='example' ></div>
+						<form> 
+							<textarea id="ele" cols="30" rows="10" readonly="readonly"> </textarea> </br></br>
+							<button id="ok">Next</button> <button id="skip">Skip</button>
+						</form>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<!-- Progress bar -->
+			<td class="bottom" colspan="3">
+				<div style="margin-left: 20px;">
+					<h3>
+						Progress <span id="p"></span>
+					</h3>
+				</div>
+				<div id="progressbar" style="margin: 20px; height: 15px"></div>
+				<div id="summary" style="margin-left: 20px; font-size: 1.4em;"></div>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

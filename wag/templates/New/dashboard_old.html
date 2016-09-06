@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" href="{{ url_for('static', filename='css/theme.css')}}" rel="stylesheet" />
+    <link type="text/css" href='css/theme.css' rel="stylesheet" />
+    <link type="text/css" href='css/dashboard.css' rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dashboard.css')}}" />
+    <script type='text/javascript' src='http://www.google.com/jsapi'></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.7.2.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='libs/colResizable-1.3.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-ui-1.8.20.custom.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-custom-file-input.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javaScripts/controllers/dashboard.js')}}"></script>
+    
+
+    <script type="text/javascript">
+        function updateObjectIframe(which) {
+           // document.getElementById('one').innerHTML = '<' + 'object id="BindElement" name="bind" type="text/html" data="' + which.href + '"><\/object>';
+	       $.ajax({
+	        	url : which.href,
+	        	type : 'GET',
+	        	success : function(data){
+					$('#one').html(data)					
+	        	}                    	
+	       });	
+        }
+    </script>
+</head>
+
+<body>
+    <input id="userid" type="hidden" value="{{userid}}" />
+    <input id="userType" type="hidden" value="{{userType}}" />
+    <div id="replace"></div>
+    <table id="theme">
+        <tr>
+            <th class="auto-style1" colspan="2">
+                <h2>&nbsp; Web Accessibility Guide</h2>
+            </th>
+            <th>
+                <a id="btnLogout" href="/logout">Log out </a></th>
+            <th>&nbsp;</th>
+        </tr>
+        <tr>
+            <td class="auto-style3" colspan="3">
+                <table id="mainTable" style="height: 830px">
+                    <tr>
+                        <td rowspan="3" class="auto-style10">
+                            <ul>
+                                <li><a id='dashbrd' href="Dashboard_table.html" onclick="updateObjectIframe(this); return false; ">Projects</a></li>
+                                <li><a href="#settings">Settings</a></li>
+                                <li><a href="#about">About</a></li>
+                            </ul>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                        </td>
+                        <td class=""></td>
+						<td >
+                            <div id="one">
+                                <object id="BindElement" name="bind" type="text/html" data=""></object>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style9"></td>
+                        <td class="auto-style3" rowspan="2">&nbsp;
+                    	    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style9">&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style2">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+
+    </table>
+</body>
+</html>

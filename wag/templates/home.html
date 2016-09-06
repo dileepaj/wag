@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WAG Results</title>
+
+<link type="text/css" href="{{ url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet" />
+<link type="text/css" href="{{ url_for('static', filename='css/ui-lightness/jquery-ui-1.8.20.custom.css')}}" rel="stylesheet" />
+<link type="text/css" href="{{ url_for('static', filename='css/main.css')}}" rel="stylesheet" />
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.10.2.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.7.2.min.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/colResizable-1.3.min.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-ui-1.8.20.custom.min.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-custom-file-input.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-xdomainajax.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/URI.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/frame.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javaScripts/controllers/viewControllers.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/bootstrap.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-migrate-1.2.1.js')}}"></script>
+</head>
+
+<body>
+<input id="userid" type="hidden" value="{{userid}}"/>
+<input id="reqType" type="hidden" value="{{type}}"/>
+<input id="siteName" type="hidden" value="{{siteName}}"/>
+<input id="evalNum" type="hidden" value="{{evalNum}}"/>
+<div class="header-wrapper row-fluid">
+
+<div class="pull-left"><a href="/"><img src="static/img/wag-logo-horizontal.png" alt="WAG Logo" /></a></div>
+	<button id="modify" class="pull-left btn btn-info">Quick Fix</button>
+		{% if userid != "Guest" %}
+	<span class="user-style">Logged in as {{userid}}!</span>
+	<a href="/dashboard" class="header-links h-back">Back</a>
+		 <a id="btnLogout" href="/logout" class="header-links h-none" >Logout</a>
+	{% else %}
+   <span class="user-style"> {{userid}}</span>
+		<a id="login" href="#" onclick="location.href='login'" class="header-links h-login">Login</a>
+	{% endif %}
+	 <a href="/documents" target="_blank" > Help &nbsp; </a>
+	<br><br>
+    <a id="reportDownload" href="#">Download Report(PDF)</a>	
+</div>
+
+<div class="main-wrapper row-fluid result">
+
+<table class="structure" border="1">
+	<tr >
+		<td class="pane">
+		<div id="leftWrapper">
+			<h3 class="h-cross">Accessibility Violations</h3>
+	        <ol id="list">
+						
+			</ol>
+			
+			<div id="violationTree" >
+				
+			</div>  
+		</div> 	
+		</td>
+	
+		<td>
+			<div id="wrapper">
+			<div id="urlName">
+				<p id="curUrl">{{curUrl}}</p>
+			</div>
+			<div id="lines">
+				
+			</div>
+			<div id="code" contenteditable="true">{{content}}</div> 
+			</div>
+		</td>
+		
+		<td class="pane">
+		<div id="rightWrapper">
+			<div class="tab-wrapper">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#feature" data-toggle="tab">Specification</a></li>
+              <li class=""><a href="#resolve" data-toggle="tab">Guide</a></li>
+            </ul>
+        	<div id="myTabContent" class="tab-content">
+	          	<div id="feature" class="tab-pane fade in active" >
+	          	</div>
+	        
+	          	<div id="resolve" class="tab-pane fade" >
+	            	<label class='headings'>Solution</label> <div id="des"></div><br />
+					<div id='example' >
+					</div>
+				<!--	<form> 
+						<textarea id="ele" cols="30" rows="10" readonly="readonly"> </textarea> </br></br>
+						<button id="ok">Next</button> <button id="skip">Skip</button>
+				</form>-->
+	          	</div>
+	              
+          	</div>    
+          </div>
+</div>
+		</td>
+			
+	</tr>
+
+</table>
+     
+</div>
+
+</body>
+<script>
+//$('#wrapper').css('height', $(window).height()+'px');
+$('#wrapper').css('height', window.innerHeight+'px');
+$('#leftWrapper').css('height', window.innerHeight+'px');
+$('#rightWrapper').css('height', window.innerHeight+'px');
+</script>
+
+</html>
+<div  class="footer1">©99XTechnology </div>

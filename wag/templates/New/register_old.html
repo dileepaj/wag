@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>WAG - Register</title>
+		 <link type="text/css" href="{{ url_for('static', filename='css/main.css')}}" rel="stylesheet" />
+		  <link type="text/css" href='css/main.css' rel="stylesheet" />
+		
+	</head>
+	
+	<body>
+	
+		<div id="register" >
+			<form action="/register" method="post" >
+				<table class="tablestyle">
+				<tr><th colspan="2">Register new User</th></tr>
+				<tr>
+				<td>{{ form.username.label}}</td><td> {{ form.username(size=30) }}</td></tr>
+				{% if form.username.errors %}
+					<ul class='errors'> 
+						{% for error in form.username.errors %}
+							<li> {{ error }}</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+				<br/>
+				<tr>
+				<td>{{ form.email.label}} </td><td>{{ form.email(size=30) }}</td></tr>
+				{% if form.email.errors %}
+					<ul class='errors'> 
+						{% for error in form.email.errors %}
+							<li> {{ error }}</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+				<br/>
+				<tr><td>{{ form.password.label}}</td><td> {{ form.password(size=30)}}</td></tr>
+				{% if form.password.errors %}
+					<ul class='errors'> 
+						{% for error in form.username.errors %}
+							<li> {{ error }}</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+				<br/>
+				<tr>
+				<td>{{ form.rePassword.label}} </td><td>{{ form.rePassword(size=30)}}</td></tr>
+				{% if form.rePassword.errors %}
+					<ul class='errors'> 
+						{% for error in form.rePassword.errors %}
+							<li> {{ error }}</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+				<br/>
+				<tr>
+				{{form.userType.label}} {{form.userType()}}
+				{% if form.userType.errors %}
+					<ul class='errors'> 
+						{% for error in form.userType.errors %}
+							<li> {{ error }}</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+				</tr>
+				<br />
+			<tr>	
+			<td><input type="submit" value="Register" /></td>
+			<td> <input type="button" value="Cancel" onClick="location.href='index'"/></td>
+			</tr >
+			</table>	
+			</form>
+		</div>	
+	</body>
+</html>

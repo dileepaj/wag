@@ -1,0 +1,9 @@
+Flask
+Flask-MongoKit
+python-bs4
+cherrypy
+Flask-login
+wtforms
+bs4
+lxml
+itsdangerous

@@ -1,0 +1,31 @@
+#login
+{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+width:100%;
+border-collapse:collapse;
+}
+#login td, #review th 
+{
+font-size:1em;
+border:0px solid #58ACFA;
+padding:3px 7px 2px 7px;
+}
+#login th 
+{
+font-size:1.1em;
+text-align:left;
+padding-top:5px;
+padding-bottom:4px;
+background-color:#58ACFA;
+color:#ffffff;
+}
+
+
+    #btnLogin {
+        width: 82px;
+        height: 34px;
+    }
+
+    #URLSubmit {
+        width: 90px;
+    }

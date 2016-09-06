@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WAG Community Results</title>
+
+<link type="text/css" href="{{ url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet" />
+<link type="text/css" href="{{ url_for('static', filename='css/ui-lightness/jquery-ui-1.8.20.custom.css')}}" rel="stylesheet" />
+<link type="text/css" href="{{ url_for('static', filename='css/main.css')}}" rel="stylesheet" />
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.10.2.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.7.2.min.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/colResizable-1.3.min.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-ui-1.8.20.custom.min.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-custom-file-input.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-xdomainajax.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='javaScripts/controllers/community.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/bootstrap.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-migrate-1.2.1.js')}}"></script>
+</head>
+
+<body>
+<input id="reqType" type="hidden" value="{{type}}"/>
+<input id="evalNum" type="hidden" value="{{evalNum}}"/>
+
+	<input type="hidden" name="json_val" id="json_val" {% if json_object %} value="{{json_object}}"  {% else %} value="" {% endif %}
+/>
+<div class="header-wrapper row-fluid">
+
+<div class="pull-left"><a href="index.html"><img src="static/img/wag-logo-horizontal.png" alt="WAG Logo" /></a></div>	
+	<a href="/community" class="header-links h-back">Back</a>	
+</div>
+
+<div class="main-wrapper row-fluid result">
+
+<table class="structure" border="1">
+	<tr>
+		<td class="pane">
+			<h3 class="h-cross">Accessibility Violations</h3>
+	        <ol id="list">
+						
+			</ol>
+			<div id="violationTree" >
+				
+			</div>   	
+		</td>
+	
+		<td>
+			<div id="wrapper">
+			<div id="urlName">
+				<p id="curUrl">{{curUrl}}</p>
+			</div>
+			<div id="lines">
+				
+			</div>
+			<div id="code" contenteditable="false">{{content}}</div>
+			</div>
+		</td>
+		
+		<td class="pane">
+			 
+			<div class="tab-wrapper">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#feature" data-toggle="tab">Specification</a></li>
+              <li class=""><a href="#resolve" data-toggle="tab">Guide</a></li>
+            </ul>
+        	<div id="myTabContent" class="tab-content">
+	          	<div id="feature" class="tab-pane fade in active" >
+	          	</div>
+
+	          	<div id="resolve" class="tab-pane fade" >
+	            	<label class='headings'>Solution</label> <div id="des"></div><br />
+					<div id='example' >
+					</div>
+				<!--	<form>
+						<textarea id="ele" cols="30" rows="10" readonly="readonly"> </textarea> </br></br>
+						<button id="ok">Next</button> <button id="skip">Skip</button>
+				</form>-->
+	          	</div>
+
+          	</div>
+          </div>
+		</td>
+			
+	</tr>
+
+</table>
+
+</div>
+
+</body>
+</html>

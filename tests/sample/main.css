@@ -1,0 +1,60 @@
+body {
+	background-color: black;
+}
+
+#title {
+	height: 50px;
+	background-color: #0033cc;
+	font: bold 42px "Trebuchet MS", sans-serif;
+	padding-left: 160px;
+	margin-bottom: 10px;
+}
+
+#footer {
+	height: 35px;
+	background-color: #0033cc;
+	margin-top: 10px;
+}
+
+#body {
+	margin: 0px 170px 0px 170px;
+	background-color: white;
+	height: 100%;
+	padding: 1px 75px 0px 75px;
+}
+
+img {
+	margin: 0px 50px 10px 0px;
+	float: left;
+}
+
+p {
+	font: 16px "Trebuchet MS", sans-serif;
+	padding: 10px 50px 20px 50px;
+}
+
+table {
+	width: 80%;
+	margin: 40px auto 0px auto;
+	background-color: #99ccff;
+	border: 1px solid black;
+	text-align: center;
+	font: 14px "Arial", sans-serif;
+}
+
+#links {
+	float: left;
+	padding: 15px 20px 10px 90px;
+}
+
+#form {
+	padding: 15px 0px 10px 550px;
+}
+
+input {
+	margin: 0px 0px 10px 50px;
+}
+
+button {
+	margin-left: 185px;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>Welcome to WAG</title>
+    <!--<link type="text/css" href="{{ url_for('static', filename='css/main.css')}}" rel="stylesheet" />
+    <link type="text/css" href="{{ url_for('static', filename='css/ui-lightness/jquery-ui-1.8.20.custom.css')}}" rel="stylesheet" />-->
+        
+    <script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-1.7.2.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-ui-1.8.20.custom.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-custom-file-input.js')}}"></script>
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='libs/jquery-xdomainajax.js')}}"></script> -->
+    <script type="text/javascript" src="{{ url_for('static', filename='javaScripts/controllers/dashboard.js')}}"></script>
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='javaScripts/controllers/viewControllers.js')}}"></script>-->
+    
+    <link type="text/css" href="{{ url_for('static', filename='css/theme.css')}}" rel="stylesheet" />
+ <!--   <link type="text/css" href="css/index.css" rel="stylesheet" />-->
+	<link rel="stylesheet" type="text/css" href="css/theme.css" />
+    
+</head>
+
+<body>
+
+<table id="theme">
+ 
+<tr>
+  <th><h2>Please Enter your web URL</h2></th>
+  <th></th>
+</tr>
+
+
+<tr>
+<td class=""></td>
+<td class=""></td>
+
+</tr>
+
+<tr>
+<td class=""></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Project Name : </td>
+<td> <input type="text" name="projectName" id="projectName"></td> 
+<tr> 
+
+</tr>
+
+
+
+<tr>
+<td class="">Enter your URL :</td>
+<td><input type="text" name="clientUrl" id="externURL"> </td>
+</tr>
+
+<tr>
+<td class=""></td>
+<td></td>
+
+</tr>
+
+<tr>
+<td class=""></td>
+<td>
+<button id="URLSubmit"> Evaluate </button> 
+ <br />
+</td>
+
+</tr>
+
+<tr>
+<td class=""></td>
+<td> <p class="validateTips">All form fields are required.</p> </td>
+
+</tr>
+
+<tr>
+<td class=""></td>
+<td></td>
+
+</tr>
+
+<tr>
+<td class=></td>
+<td>
+				<fieldset style="width: 291px; background-color: #FFFFFF;">
+					<label for="disability">Select visual impairment<br />
+                    </label>
+					<div id="disability">
+						<input type="checkbox" value=2 checked="true"/>
+						Total Blind
+						<br />
+						<input type="checkbox" value=3 checked="true"/>
+						Low Vision
+						<br />
+						<input type="checkbox" value=5 checked="true"/>
+						Color Blind
+						<br />
+					</div>
+					<br />
+					<br />
+
+					<label for="priority">Select priority level</label>
+					<select id="priority" class="combobox" name="D1">
+						<option value="3">Level A</option><!-- High + Medium + Low -->
+						<option value="2">Level B</option><!-- High + Medium -->
+						<option value="1">Level C</option><!-- High -->
+					</select>
+				</fieldset></td>
+<td><br /></td>
+</tr>
+
+<tr>
+<td class=""></td>
+<td class=""></td>
+<td></td>
+</tr>
+
+<tr>
+<td class=""></td>
+<td class=""></td>
+<td></td>
+</tr>
+</div>
+</table>
+</body>
+</html>
