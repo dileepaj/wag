@@ -1,6 +1,7 @@
 Flask
 selenium
 pyhtml
+pdfkit
 pymongo==2.8
 Flask-MongoKit
 BeautifulSoup4
