@@ -1,4 +1,5 @@
 Flask
+selenium
 pymongo==2.8
 Flask-MongoKit
 BeautifulSoup4
