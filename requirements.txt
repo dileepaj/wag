@@ -1,6 +1,6 @@
 Flask
 Flask-MongoKit
-python-bs4
+BeautifulSoup4
 cherrypy
 Flask-login
 wtforms
