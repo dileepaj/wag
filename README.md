@@ -1,25 +1,45 @@
 # Welcome to WAG
 
 ## How to start development
+
 ### Step 1: Install pip
 
     $ sudo apt-get install python-pip
 
 ### Step 2: Install MongoDB
+
+#### For Ubuntu
 	
-    $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+    	$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
     
-    $ echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/10gen.list
+    	$ echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 
-    $ sudo apt-get update
+    	$ sudo apt-get update
+	
+	$ sudo apt-get install -y mongodb-org
 
-    $ sudo apt-get install mongodb-10gen
-
-
+####For Windows
+	
+	####Download the MSI file and install
+	https://www.mongodb.com/download-center?jmp=docs
+	
+	####Installation instrcutions
+	https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+	
 ### Step 3: Installing dependencies
 navigate into the git repo directory and type the following:
 
     $ pip install -r requirements.txt
+    
+### Step 4: Install PDFKIt
+
+####For Ubuntu
+
+	#https://pypi.python.org/pypi/pdfkit
+	
+####For Windows
+
+	#http://wkhtmltopdf.org/downloads.html
 
 This will install all python dependencies.
 
