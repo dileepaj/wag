@@ -18,12 +18,12 @@
 	
 	$ sudo apt-get install -y mongodb-org
 
-####For Windows
+#### For Windows
 	
-	####Download the MSI file and install
+	#### Download the MSI file and install
 	https://www.mongodb.com/download-center?jmp=docs
 	
-	####Installation instrcutions
+	#### Installation instrcutions
 	https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
 	
 ### Step 3: Installing dependencies
@@ -33,11 +33,11 @@ navigate into the git repo directory and type the following:
     
 ### Step 4: Install PDFKIt
 
-####For Ubuntu
+#### For Ubuntu
 
 	#https://pypi.python.org/pypi/pdfkit
 	
-####For Windows
+#### For Windows
 
 	#http://wkhtmltopdf.org/downloads.html
 
