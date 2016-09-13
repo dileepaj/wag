@@ -4,7 +4,7 @@
 
 ### Step 1: Install pip
 
-    $ sudo apt-get install python-pip
+    	$ sudo apt-get install python-pip
 
 ### Step 2: Install MongoDB
 
@@ -15,15 +15,15 @@
     	$ echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 
     	$ sudo apt-get update
-	
-	$ sudo apt-get install -y mongodb-org
+    	
+    	$ sudo apt-get install -y mongodb-org
 
 #### For Windows
 	
-	#### Download the MSI file and install
+#### Download the MSI file and install
 	https://www.mongodb.com/download-center?jmp=docs
 	
-	#### Installation instrcutions
+#### Installation Instructions
 	https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
 	
 ### Step 3: Installing dependencies
@@ -35,11 +35,11 @@ navigate into the git repo directory and type the following:
 
 #### For Ubuntu
 
-	#https://pypi.python.org/pypi/pdfkit
+	https://pypi.python.org/pypi/pdfkit
 	
 #### For Windows
 
-	#http://wkhtmltopdf.org/downloads.html
+	http://wkhtmltopdf.org/downloads.html
 
 This will install all python dependencies.
 
